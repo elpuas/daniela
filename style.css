@@ -1,0 +1,2230 @@
+/*
+Theme Name: Daniela
+Theme URI: https://github.com/chrisdc/Daniela
+Author: Christopher Crouch
+Description: Daniela is a clean, mobile-first theme with a touch of elegance. With features including a front page template and Jetpack Testimonial and Portfolio post types, Daniela is ideal for freelancers and small businesses in the creative industries.
+Version: 1.0.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: daniela
+Tags: light, blue, two-columns, right-sidebar, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Daniela is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Typography
+3.0 Genericons
+4.0 Elements
+5.0 Forms
+6.0 Navigation
+	6.1 Links
+	6.2 Menus
+7.0 Accessibility
+8.0 Alignments
+9.0 Clearings
+10.0 Basic layout
+11.0 Widgets
+12.0 Header
+13.0 Content
+	13.1 Posts and pages
+	13.2 Entry meta
+	13.3 Aside Post Format
+	13.4 Quote Post Format
+	13.5 Link Post Format
+	13.6 Page Templates
+	13.7 Comments
+14.0 Footer
+16.0 Media
+	16.1 Captions
+	16.2 Galleries
+17.0 Jetpack Features
+	17.1 Infinite scroll
+	17.2 Sharing
+	17.3 Portfolio
+	17.4 Testimonials
+	17.5 Site Logo
+18.0 Media Queries
+19.0 Print Media Stylesheet
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Normalize
+--------------------------------------------------------------*/
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	    -ms-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #333;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	line-height: 1.25;
+}
+
+h1 {
+	font-family: "Playfair Display", serif;
+	font-size: 36px;
+	font-size: 2.25rem;
+	margin: 0.95238095238em 0 0.7619047619em; /* 40px 0 32px */
+}
+
+h2 {
+	font-family: "Playfair Display", serif;
+	font-size: 28px;
+	font-size: 1.75rem;
+	font-weight: normal;
+	margin: 1em 0 0.75em; /* 32px 0 24px */
+}
+
+h3 {
+	font-size: 20px;
+	font-size: 1.25rem;
+	margin: 1.6em 0 0.83333333333em; /* 32px 0 24px */
+}
+
+h4 {
+	font-size: 16px;
+	font-size: 1rem;
+	margin: 1.5em 0 1em; /* 24px 0 16px */
+}
+
+h5 {
+	font-size: 14px;
+	font-size: 0.875rem;
+	letter-spacing: 1px;
+	margin: 1.71428571429em 0 1.14285714286em; /* 24px 0 16px */
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 14px;
+	font-size: 0.875rem;
+	margin: 1.71428571429em 0 1.14285714286em; /* 24px 0 16px */
+}
+
+p,
+pre,
+address,
+blockquote,
+ul,
+ol {
+	margin: 0 0 1.25em; /* 0 0 20px */
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+pre {
+	background: #eee;
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em; /* 24px */
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+3.0 Genericons
+--------------------------------------------------------------*/
+.social-navigation a:before,
+.format-link .entry-title a:after,
+.comment .comment-reply-link:before,
+.comment .edit-link:before,
+.pingback .edit-link:before,
+.entry-footer span:before {
+	display: inline-block;
+	font-family: "Genericons";
+	font-size: inherit;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	speak: none;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	vertical-align: top;
+}
+
+/*--------------------------------------------------------------
+4.0 Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em; /* 24px */
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	padding-left: 1.5em; /* 24px */
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em; /* 0 24px 24px */
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	vertical-align: top; /* Avoid extra space. */
+}
+
+figure {
+	margin: 1.5em 0; /* 24px 0 */
+	margin: 0;
+}
+
+figcaption {
+	color: #727272;
+	font-style: italic;
+}
+
+table {
+	margin: 0 0 1.5em; /* 0 0 24px */
+	text-align: left;
+	width: 100%;
+}
+
+th,
+td {
+	padding: 0.5em 0.25em; /* 8px 4px */
+}
+
+tr {
+	border-bottom: 1px solid #d0d0d0;
+}
+
+/*--------------------------------------------------------------
+5.0 Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.entry-content .button {
+	background-color: #333;
+	border: 0;
+	border-radius: 0.1875em; /* 3px */
+	box-shadow: none;
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: bold;
+	margin: 0 auto;
+	padding: 0.75em 1em; /* 12px 16px */
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.button:hover {
+	background-color: #21759b;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+.button:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+.button:active {
+	background-color: #21759b;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
+}
+
+.entry-content .button-minimal {
+	background-color: #fff;
+	border: 3px solid #333;
+	border-radius: 0.1875em; /* 3px */
+	box-shadow: none;
+	color: #333;
+	display: inline-block;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: bold;
+	margin: 0 auto;
+	padding: 0.625em 0.875em; /* 12px 16px */
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
+}
+
+.entry-content .button-minimal:hover,
+.entry-content .button-minimal:focus {
+	background-color: #333;
+	color: #fff;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	border: 1px solid #ccc;
+	border-radius: 0.1875em; /* 3px */
+	color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: 0.6875em 0.375em; /* 11px 6px */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	border-color: #21759b;
+	outline: 0;
+	box-shadow: 0px 0px 5px #21759b;
+}
+
+textarea {
+	padding-left: 0.375em; /* 6px */
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+6.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+6.1 Links
+--------------------------------------------------------------*/
+a {
+	color: #21759b;
+	text-decoration: none;
+	-webkit-transition: color 0.2s;
+	        transition: color 0.2s;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #104e6b;
+	text-decoration: underline;
+	-webkit-transition: color 0.2s;
+	        transition: color 0.2s;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+6.2 Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	color: #727272;
+	width: 100%;
+}
+
+.main-navigation button {
+	background: none;
+	border: 3px solid #333;
+	box-shadow: none;
+	color: #333;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: bold;
+	margin: 0 auto;
+	padding: 0.75em 1em; /* 12px 16px */
+	text-align: center;
+	text-shadow: none;
+}
+
+.main-navigation button:hover,
+.main-navigation button:focus,
+.main-navigation button:active {
+	background-color: #333;
+	color: #fff;
+}
+
+.main-navigation .nav-menu {
+	display: none;
+	padding-left: 0;
+}
+
+.main-navigation.toggled .nav-menu {
+	border-top: 1px solid #d0d0d0;
+	display: block;
+	margin-top: 0.875em; /* 14px */
+}
+
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	text-align: left;
+}
+
+.main-navigation li {
+	border-bottom: 1px solid #d0d0d0;
+	display: list-item;
+	position: relative;
+}
+
+.main-navigation a {
+	color: #727272;
+	display: block;
+	padding: 0.875em 0; /* 14px 0 */
+}
+
+.main-navigation a:hover,
+.main-navigation .focus > a {
+	color: #21759b;
+}
+
+.main-navigation ul ul {
+	border-top: 1px solid #d0d0d0;
+	list-style: disc;
+	padding: 0.875em 0 0.875em 2em; /* 14px 0 14px 32px */
+}
+
+.main-navigation ul ul li {
+	border-bottom-width: 0;
+	display: list-item;
+}
+
+.main-navigation ul ul ul {
+	border-top-width: 0;
+	padding-top: 0;
+}
+
+.main-navigation ul ul li:last-child {
+	border-bottom-width: 0;
+}
+
+.main-navigation ul ul .menu-item-has-children a:after {
+	right: 0.5em; /* 4px */
+	top: 1.75em; /* 14px */
+}
+
+.main-navigation ul ul a {
+	padding: 0.25em 0; /* 4px 0 */
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	padding-bottom: 0;
+	top: 0;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a {
+	font-weight: bold;
+}
+
+/* Social menu */
+.social-navigation {
+	margin-bottom: 0.5em; /* 8px */
+}
+
+.social-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.social-navigation li {
+	display: inline-block;
+	margin: 0 0.25em; /* 0 4px */
+}
+
+.social-navigation a {
+	color: #333;
+	display: block;
+	height: 2em; /* 32px */
+	position: relative;
+	width: 2em; /* 32px */
+}
+
+.social-navigation a:hover,
+.social-navigation a:focus {
+	color: #21759b;
+	text-decoration: none;
+}
+
+.social-navigation a:before {
+	content: "\f415";
+	font-size: 32px;
+	font-size: 2rem;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+.social-navigation a[href$="/feed/"]:before {
+	content: "\f413";
+}
+
+.social-navigation a[href*="codepen.io"]:before {
+	content: "\f216";
+}
+
+.social-navigation a[href*="digg.com"]:before {
+	content: "\f221";
+}
+
+.social-navigation a[href*="dribbble.com"]:before {
+	content: "\f201";
+}
+
+.social-navigation a[href*="dropbox.com"]:before {
+	content: "\f225";
+}
+
+.social-navigation a[href*="facebook.com"]:before {
+	content: "\f203";
+}
+
+.social-navigation a[href*="flickr.com"]:before {
+	content: "\f211";
+}
+
+.social-navigation a[href*="foursquare.com"]:before {
+	content: "\f226";
+}
+
+.social-navigation a[href*="plus.google.com"]:before {
+	content: "\f206";
+}
+
+.social-navigation a[href*="github.com"]:before {
+	content: "\f200";
+}
+
+.social-navigation a[href*="instagram.com"]:before {
+	content: "\f215";
+}
+
+.social-navigation a[href*="linkedin.com"]:before {
+	content: "\f208";
+}
+
+.social-navigation li a[href*="path.com"]:before {
+	content: "\f219";
+}
+
+.social-navigation a[href*="pinterest.com"]:before {
+	content: "\f210";
+}
+
+.social-navigation a[href*="getpocket.com"]:before {
+	content: "\f224";
+}
+
+.social-navigation a[href*="polldaddy.com"]:before {
+	content: "\f217";
+}
+
+.social-navigation a[href*="reddit.com"]:before {
+	content: "\f222";
+}
+
+.social-navigation a[href*="stumbleupon.com"]:before {
+	content: "\f223";
+}
+
+.social-navigation a[href*="tumblr.com"]:before {
+	content: "\f214";
+}
+
+.social-navigation a[href*="twitter.com"]:before {
+	content: "\f202";
+}
+
+.social-navigation a[href*="vimeo.com"]:before {
+	content: "\f212";
+}
+
+.social-navigation a[href*="wordpress.com"]:before,
+.social-navigation a[href*="wordpress.org"]:before {
+	content: "\f205";
+}
+
+.social-navigation a[href*="youtube.com"]:before {
+	content: "\f213";
+}
+
+.social-navigation a[href*="mailto:"]:before {
+	content: "\f410";
+}
+
+.social-navigation a[href*="spotify.com"]:before {
+	content: "\f515";
+}
+
+.social-navigation a[href*="twitch.tv"]:before {
+	content: "\f516";
+}
+
+/* Post navigation */
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	border-top: 1px solid #d0d0d0;
+	border-bottom: 1px solid #d0d0d0;
+	clear: both;
+	font-weight: bold;
+	letter-spacing: 1px;
+	overflow: hidden;
+	padding: 3em 0; /* 48px 0 */
+	text-transform: uppercase;
+}
+
+.full-width .site-main .comment-navigation,
+.full-width .site-main .posts-navigation,
+.full-width .site-main .post-navigation,
+.post-type-archive-jetpack-portfolio .site-main .comment-navigation,
+.post-type-archive-jetpack-portfolio .site-main .posts-navigation,
+.post-type-archive-jetpack-portfolio .site-main .post-navigation,
+.post-type-archive-jetpack-testimonial .site-main .comment-navigation,
+.post-type-archive-jetpack-testimonial .site-main .posts-navigation,
+.post-type-archive-jetpack-testimonial .site-main .post-navigation {
+	border-bottom-width: 0;
+}
+
+.site-main .comment-navigation {
+	border-bottom: 1px solid #d0d0d0;
+	border-top-width: 0;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+.post-navigation .post-title {
+	color: #727272;
+	font-weight: normal;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.post-navigation span {
+	display: block;
+}
+
+.nav-links a:hover .post-title {
+	text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+7.0 Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/*--------------------------------------------------------------
+8.0 Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em; /* 24px */
+	margin-bottom: 1.25em; /* 20px */
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-bottom: 1.25em; /* 24px */
+	margin-left: 1.5em; /* 20px */
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+9.0 Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after,
+.front-testimonials:before,
+.front-testimonials:after,
+.front-portfolio:before,
+.front-portfolio:after,
+.front-page-widgets:before,
+.front-page-widgets:after {
+	content: "";
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after,
+.front-testimonials:after,
+.front-portfolio:after,
+.front-page-widgets:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+10.0 Basic layout
+--------------------------------------------------------------*/
+.site {
+	background-color: #fff;
+	margin: 0 auto;
+	max-width: 71.25em; /* 1140px max */
+}
+
+.site-header,
+.site-content,
+.site-footer {
+	margin-right: auto;
+	margin-left: auto;
+	width: 89.47368421%; /* 1020px max */
+}
+
+/*--------------------------------------------------------------
+11.0 Widgets
+--------------------------------------------------------------*/
+.widget-area {
+	margin-top: 2em; /* 32px */
+}
+
+.widget {
+	margin: 0 0 2em; /* 0 0 32px */
+}
+
+.widget-title {
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 1.6;
+	margin: 0 0 0.4375em; /* 0 0 7px */
+	text-transform: uppercase;
+}
+
+.widget ul {
+	list-style: none;
+	padding: 0;
+}
+
+.widget ul ul {
+	list-style: none;
+	margin-top: 0.4375em; /* 7px */
+	padding: 0;
+}
+
+.widget li {
+	border-top: 1px solid #d0d0d0;
+	padding: 0.4375em 0; /* 7px 0 */
+}
+
+.widget li:first-child {
+	border-top: 4px double #d0d0d0;
+}
+
+.widget .children li:first-child {
+	border-top: 1px solid #d0d0d0;
+}
+
+.widget li:last-child {
+	padding-bottom: 0;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+12.0 Header
+--------------------------------------------------------------*/
+.site-header {
+	margin-bottom: 2.5em; /* 40px */
+	text-align: center;
+}
+
+.site-branding a:hover,
+.site-branding a:focus {
+	color: #21759b;
+	text-decoration: none;
+}
+
+.site-branding {
+	padding: 2.5em 0; /* 40px 0 */
+}
+
+.site-title {
+	font-family: "Playfair Display", serif;
+	font-size: 42px;
+	font-size: 2.625rem;
+	font-weight: 900;
+	line-height: 1;
+	margin: 0 0 0.1em; /* 0 0 6px */
+}
+
+.site-title a {
+	color: inherit;
+}
+
+.site-description {
+	color: #21759b;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.custom-header {
+	margin-top: 1em; /* 16px */
+}
+
+/*--------------------------------------------------------------
+13.0 Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+13.1 Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	border-bottom: 1px solid #d0d0d0;
+	margin: 0 0 3em; /* 0 0 48px */
+	padding: 0 0 3em; /* 0 0 48px */
+}
+
+/* Fix spacing on last blog entry where no post nav exists. */
+.blog .hentry:last-of-type,
+.archive .hentry:last-of-type,
+.single .hentry:last-of-type {
+	border-bottom-width: 0;
+	margin-bottom: 0;
+}
+
+.entry-meta {
+	color: #21759b;
+	font-weight: bold;
+}
+
+.entry-content a,
+.entry-summary a,
+.page-content a,
+.comment-content a {
+	text-decoration: underline;
+}
+
+.entry-footer {
+	color: #727272;
+}
+
+.entry-footer a {
+	color: inherit;
+}
+
+.entry-footer a:hover,
+.entry-footer a:focus {
+	color: #21759b;
+}
+
+.entry-title {
+	margin: 0;
+	font-family: "Playfair Display", serif;
+	font-size: 36px;
+	font-size: 2.25rem;
+	font-weight: bold;
+	word-wrap: break-word;
+}
+
+.entry-title a {
+	color: inherit;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+	color: #21759b;
+	text-decoration: none;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0; /* 24px 0 */
+	word-wrap: break-word;
+}
+
+.page-content > :first-child,
+.entry-content > :first-child,
+.entry-summary > :first-child,
+.comment-content > :first-child {
+	margin-top: 0;
+}
+
+.page-content > :last-child,
+.entry-content > :last-child,
+.entry-summary > :last-child,
+.comment-content > :last-child {
+	margin-bottom: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em; /* 0 0 24px */
+}
+
+.archive-thumbnail,
+.post-thumbnail {
+	margin-bottom: 2em; /* 32px */
+}
+
+.post-thumbnail img {
+	display: block;
+	margin: 0 auto;
+}
+
+.entry-content a img,
+.entry-summary a img,
+.page-content a img,
+.comment-content a img,
+.post-thumbnail a img {
+	-webkit-transition: opacity 0.2s;
+	        transition: opacity 0.2s;
+}
+
+.entry-content a img:hover,
+.entry-content a img:focus,
+.entry-summary a img:hover,
+.entry-summary a img:focus,
+.page-content a img:hover,
+.page-content a img:focus,
+.comment-content a img:hover,
+.comment-content a img:focus,
+.post-thumbnail a img:hover,
+.post-thumbnail a img:focus {
+	opacity: 0.9;
+	-webkit-transition: opacity 0.2s;
+	        transition: opacity 0.2s;
+}
+
+/* Archive titles */
+.archive-header {
+	margin-bottom: 2.5em; /* 40px */
+}
+
+.archive-header,
+.archive-description {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 52.75em; /* 844px */
+	word-wrap: break-word;
+}
+
+.archive-title {
+	font-size: 32px;
+	font-size: 2rem;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 1;
+	margin: 0;
+	text-align: center;
+}
+
+.archive-description {
+	font-style: italic;
+	margin-top: 2.5em; /* 40px */
+}
+
+/*--------------------------------------------------------------
+13.2 Entry meta
+--------------------------------------------------------------*/
+.entry-footer {
+	margin-top: 1.5em; /* 24px */
+	word-wrap: break-word;
+}
+
+.entry-footer span {
+	display: inline-block;
+	margin-right: 1.5em; /* 24px */
+}
+
+.entry-footer span:before {
+	margin-right: 0.1875em; /* 3px */
+	position: relative;
+	top: 0.3125em; /* 5px */
+}
+
+.cat-links:before,
+.single-jetpack-portfolio .portfolio-type-links:before {
+	content: "\f301";
+}
+
+.tags-links:before,
+.portfolio-tag-links:before {
+	content: "\f302";
+}
+
+.comments-link:before {
+	content: "\f300";
+}
+
+.author-link:before {
+	content: "\f304";
+}
+
+.edit-link:before {
+	content: "\f411";
+}
+
+/*--------------------------------------------------------------
+13.3 Aside Post Format
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+13.4 Quote Post Format
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title {
+	display: none;
+}
+
+.format-quote .entry-title {
+	display: none;
+}
+
+.format-quote blockquote {
+	font-family: "Playfair Display", serif;
+	font-size: 2em; /* 32px */
+	line-height: 1.25;
+	margin: 0;
+}
+
+.format-quote cite {
+	display: block;
+	font-style: normal;
+	margin-top: 0.5em;  /* 16px */
+}
+
+.format-quote cite a {
+	text-decoration: none;
+}
+
+.format-quote cite a:hover {
+	text-decoration: underline;
+}
+
+.format-quote blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+13.5 Link Post Format
+--------------------------------------------------------------*/
+.format-link .entry-title a {
+	position: relative;
+}
+
+.format-link .entry-title a:after {
+	color: #21759b;
+	content: "\f442";
+	position: relative;
+	right: 0;
+	top: 0.16666666666em; /* 6px */
+}
+
+/*--------------------------------------------------------------
+13.6 Page Templates
+--------------------------------------------------------------*/
+/* 404 template */
+.error-404 {
+	padding-bottom: 3em; /* 48px */
+}
+
+.error-404 .page-title {
+	margin-top: 0;
+}
+
+.error-404 > :last-child {
+	margin-bottom: 0;
+}
+
+/* full width template */
+.full-width .entry-header,
+.full-width .entry-content,
+.full-width .entry-footer,
+.full-width .comments-area,
+.front-page .hero-content .entry-header,
+.front-page .hero-content .entry-content {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 52.75em; /* 844px */
+}
+
+/* Front page template */
+.front-page .content-area {
+	float: none;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.hero-content .entry-content {
+	margin-bottom: 0;
+}
+
+.front-page .site-main > :last-child {
+	border-bottom-width: 0;
+	margin-bottom: 0;
+}
+
+.front-page .hero-content article {
+	margin-bottom: 2.625em; /* 42px */
+	text-align: center;
+}
+
+.front-page .hero-content p {
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: normal;
+	line-height: 1.3125;
+	margin: 0 auto 0.75em; /* 0 auto 24px */
+	width: 95%;
+}
+
+.front-page .content-area p:last-child {
+	margin-bottom: 0;
+}
+
+.hero-image {
+	margin-bottom: 2.5em; /* 40px */
+	position: relative;
+}
+
+.front-page .front-testimonials,
+.front-page .front-portfolio,
+.front-page .front-page-widgets {
+	border-bottom: 1px solid #d0d0d0;
+	margin-bottom: 2.5em; /* 40px */
+	padding-bottom: 0.25em; /* 4px */
+}
+
+/*--------------------------------------------------------------
+13.7 Comments
+--------------------------------------------------------------*/
+.comments-title {
+	border-bottom: 4px double #d0d0d0;
+	margin-bottom: 0;
+	padding-bottom: 1em; /* 32px */
+}
+
+.comment-list,
+.comment-list .children {
+	list-style: none;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.avatar {
+	border-radius: 50%;
+	left: 0;
+	position: absolute;
+	top: 0.25em; /* 4px */
+}
+
+.comment-author .fn {
+	font-family: "Playfair Display", serif;
+	font-size: 28px;
+	font-size: 1.75rem;
+	font-weight: bold;
+	line-height: 1;
+	margin: 0;
+}
+
+.comment-author .fn a {
+	color: #333;
+}
+
+.comment-author .fn a:hover,
+.comment-author .fn a:focus {
+	color: #21759b;
+	text-decoration: none;
+}
+
+.comment-metadata {
+	display: inline;
+}
+
+.comment-meta {
+	margin-bottom: 1.25em; /* 16px */
+	position: relative;
+}
+
+.comment .reply {
+	margin-top: 1.25em; /* 16px */
+}
+
+.comment-author,
+.comment-metadata,
+.comment-content,
+.comment-awaiting-moderation,
+.reply {
+	padding-left: 3em; /* 48px */
+}
+
+.comment .comment-reply-link:before {
+	content: "\f412";
+	margin-right: 0.25em; /* 4px */
+	position: relative;
+	top: 0.3125em; /* 5px */
+}
+
+.comment .edit-link:before,
+.pingback .edit-link:before {
+	content: "\f411";
+	margin-right: 0.25em; /* 4px */
+	position: relative;
+	top: 0.3125em; /* 5px */
+}
+
+.comment .comment-reply-link:hover:before {
+	text-decoration: none;
+}
+
+.comment-body {
+	border-bottom: 1px solid #d0d0d0;
+	padding: 2.25em 0; /* 36px 0 */
+}
+
+.says {
+	display: none;
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.comment .edit-link,
+.pingback .edit-link,
+.trackback .edit-link {
+	color: #727272;
+}
+
+.comment .edit-link a,
+.pingback .edit-link a,
+.trackback .edit-link a {
+	color: inherit;
+}
+
+.comment .edit-link a:hover,
+.pingback .edit-link a:hover,
+.trackback .edit-link a:hover {
+	color: #21759b;
+}
+
+.no-comments {
+	margin: 1.25em 0; /* 20px 0 */
+}
+
+/*--------------------------------------------------------------
+14.0 Footer
+--------------------------------------------------------------*/
+.site-footer {
+	border-top: 1px solid #d0d0d0;
+	padding: 2.625em; /* 42px */
+	text-align: center;
+}
+
+.site-info,
+.site-info a {
+	color: #727272;
+}
+
+.site-info a {
+	text-decoration: underline;
+}
+
+.site-info a:hover,
+.site-info a:focus {
+	color: #21759b;
+}
+
+/*--------------------------------------------------------------
+16.0 Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+16.1 Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1em; /* 16px */
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.75em 0; /* 12px 0 */
+}
+
+/*--------------------------------------------------------------
+16.2 Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em; /* 24px */
+}
+
+.gallery-item {
+	display: inline-block;
+	margin-bottom: 1.25em; /* 20px */
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+	margin-top: 0.5em; /* 8px */
+}
+
+/*--------------------------------------------------------------
+17.0 Jetpack Features
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+17.1 Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+/* Older / Newer Posts Navigation (always hidden). */
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling). */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+#infinite-handle,
+.infinite-loader {
+	border-top: 1px solid #d0d0d0;
+	border-bottom: 1px solid #d0d0d0;
+	clear: both;
+	padding: 3em 0; /* 48px */
+	text-align: center;
+}
+
+.full-width #infinite-handle,
+.full-width .infinite-loader,
+.post-type-archive-jetpack-portfolio #infinite-handle,
+.post-type-archive-jetpack-portfolio .infinite-loader,
+.post-type-archive-jetpack-testimonial #infinite-handle,
+.post-type-archive-jetpack-testimonial .infinite-loader {
+	border-bottom-width: 0;
+}
+
+
+#infinite-handle span {
+	background-color: #333;
+	border: 0;
+	border-radius: 0.1875em; /* 3px */
+	box-shadow: none;
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.75em 1em; /* 12px 16px */
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
+}
+
+#infinite-handle span:hover {
+	background-color: #21759b;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
+}
+
+#infinite-handle span:focus {
+	background-color: #21759b;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
+}
+
+.infinite-loader .spinner {
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+17.2 Sharing / Related Posts
+--------------------------------------------------------------*/
+.sharedaddy,
+div#jp-relatedposts {
+	margin-top: 1.75em; /* 28px */
+}
+
+.sharedaddy .sd-title,
+div#jp-relatedposts .jp-relatedposts-headline {
+	font-size: 16px;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+div#jp-relatedposts {
+	margin-bottom: 0;
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+17.3 Portfolio
+--------------------------------------------------------------*/
+.post-type-archive-jetpack-portfolio .content-area,
+.tax-jetpack-portfolio-type .content-area,
+.tax-jetpack-portfolio-tag .content-area {
+	width: 100%;
+}
+
+.portfolio-projects .jetpack-portfolio .entry-footer {
+	margin-top: 0.5em; /* 8px */
+}
+
+.portfolio-projects .jetpack-portfolio .entry-title {
+	font-family: "Open Sans", sans-serif;
+	font-size: 20px;
+	font-size: 1.25rem;
+	line-height: 1.25;
+}
+
+.portfolio-type-links {
+	color: #727272;
+}
+
+.portfolio-type-links a {
+	color: inherit;
+}
+
+.portfolio-type-links a:hover,
+.portfolio-type-links a:focus {
+	color: #21759b;
+}
+
+.portfolio-projects .jetpack-portfolio {
+	border-bottom-width: 0;
+	margin-bottom: 0;
+	padding-bottom: 2.25em; /* 36px */
+	text-align: center;
+}
+
+.post-thumbnail {
+	margin-bottom: 1.25em; /* 20px */
+}
+
+/*--------------------------------------------------------------
+17.4 Testimonials
+--------------------------------------------------------------*/
+
+.post-type-archive-jetpack-testimonial .content-area {
+	width: 100%;
+}
+
+.jetpack-testimonial .entry-title {
+	font-family: "Open Sans", sans-serif;
+	font-size: 20px;
+	font-size: 1.25rem;
+	line-height: 1.25;
+}
+
+.jetpack-testimonial .post-thumbnail {
+	float: left;
+	margin: 0 1em 0.25em 0; /* 0 16px 4px 0 */
+}
+
+.jetpack-testimonial .entry-content {
+	margin: 0 0 1.25em; /* 0 0 20px */
+}
+
+.jetpack-testimonial .post-thumbnail img {
+	border-radius: 50%;
+}
+
+.jetpack-testimonial {
+	border-bottom-width: 0;
+	margin-bottom: 0;
+	padding-bottom: 2.25em; /* 36px */
+	position: relative;
+}
+
+/*--------------------------------------------------------------
+17.5 Site Logo
+--------------------------------------------------------------*/
+.site-logo {
+	border-radius: 50%;
+	margin-bottom: 0.5em; /* 8px */
+	width: 5em; /* 80px */
+}
+
+/*--------------------------------------------------------------
+18.0 Media Queries
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 450px) {
+	.site-title {
+		font-size: 60px;
+		font-size: 3.75rem;
+	}
+
+	h1,
+	.entry-title {
+		font-size: 42px;
+		font-size: 2.625rem;
+	}
+
+	h2 {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+
+	.comment-author .fn {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+
+	.site-logo {
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	/* 2 Portfolio projects / widgets per row. */
+	.portfolio-projects .jetpack-portfolio {
+		float: left;
+		margin-right: 5.333333334%; /* 36 px max */
+		width: 47.333333333%; /* 210px max */
+	}
+
+	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
+		margin-right: 0;
+	}
+}
+
+@media screen and (min-width: 750px) {
+	/* Basic layout */
+	.content-area {
+		float: left;
+		width: 65.490196078%; /* 668px max */
+	}
+
+	.full-width .content-area {
+		float: none;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.full-width .entry-header,
+	.full-width .entry-content,
+	.full-width .entry-footer,
+	.full-width .comments-area {
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 52.75em; /* 844px */
+	}
+
+	.widget-area {
+		float: right;
+		margin-top: 0;
+		width: 30.980392156%; /* 316px max */
+		word-wrap: break-word;
+	}
+
+	/* Avoid a double border next to the footer. */
+	.site-main > :last-child {
+		border-bottom-width: 0;
+		margin-bottom: 0;
+	}
+
+	/* Menu */
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation {
+		border-top: 1px solid #d0d0d0;
+		border-bottom: 1px solid #d0d0d0;
+		padding: 0.875em 0; /* 14px 0 */
+	}
+
+	.main-navigation .nav-menu {
+		display: block;
+		text-align: center;
+	}
+
+	.main-navigation.toggled .nav-menu {
+		border-width: 0;
+		margin: 0;
+	}
+
+	.main-navigation li {
+		border-width: 0;
+		display: inline-block;
+		margin: 0 0.75em; /* 0 12px */
+	}
+
+	.main-navigation a {
+		padding: 0;
+	}
+
+	.main-navigation .menu-item-has-children > a {
+		padding-right: 12px;
+	}
+
+	.main-navigation ul ul {
+		background-color: #fff;
+		border: 1px solid #d0d0d0;
+		left: -999em;
+		list-style: none;
+		padding: 0;
+		position: absolute;
+		/*text-align: left;*/
+		top: 100%;
+		z-index: 99999;
+	}
+
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li.focus > ul {
+		left: auto;
+	}
+
+	.main-navigation .menu-item-has-children > a:after {
+		content: "\f502";
+		font-family: genericons;
+		font-size: 8px;
+		font-size: 0.5rem;
+		position: absolute;
+		right: 0;
+		top: 1em; /* 16px */
+	}
+
+	.main-navigation ul ul li {
+		border-bottom: 1px solid #d0d0d0;
+		margin: 0;
+	}
+
+	.main-navigation ul ul li:last-child {
+		border-bottom: 0;
+	}
+
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		left: 100%;
+		top: -1px;
+	}
+
+	.main-navigation ul ul .menu-item-has-children > a:after {
+		content: "\f501";
+		right: 0.5em; /* 4px */
+		top: 1.75em; /* 14px */
+	}
+
+	.main-navigation ul ul a {
+		padding: 0.5em 0.75em; /* 8px 12px */
+		width: 12.5em; /* 16px */
+	}
+
+	.main-navigation ul ul ul {
+		border-top-width: 1px;
+		left: -999em;
+	}
+
+	/* 2 Testimonials / widgets per row. */
+	.jetpack-testimonial,
+	.front-page .widgets-2 .widget-area {
+		float: left;
+		margin-right: 3.529411764%; /* 36 px max */
+		width: 48.235294117%; /* 492px max */
+	}
+
+	.jetpack-testimonial:nth-of-type(2n),
+	.front-page .widgets-2 .widget-area:nth-of-type(2n) {
+		margin-right: 0;
+	}
+
+
+	#infinite-handle,
+	.infinite-loader {
+		border-bottom-width: 0;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	/* 3 portfolio projects / widgets per row */
+	.portfolio-projects .jetpack-portfolio,
+	.front-page .widgets-3 .widget-area {
+		float: left;
+		margin-right: 3.529411765%; /* 36 px max */
+		width: 30.980392156%; /* 316px max */
+	}
+
+	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
+		margin-right: 3.529411765%; /* 36 px max */
+	}
+
+	.portfolio-projects .jetpack-portfolio:nth-of-type(3n),
+	.front-page .widgets-3 .widget-area:nth-of-type(3n) {
+		margin-right: 0;
+	}
+
+	.portfolio-projects .jetpack-portfolio:nth-of-type(3n + 1) {
+		clear: left;
+	}
+}
+
+/* Max width + padding */
+@media screen and (min-width: 1133px) {
+	.full-width .alignleft {
+		margin-left: -8.62745098%;
+	}
+
+	.full-width .alignright {
+		margin-right: -8.62745098%;
+	}
+}
+
+/*--------------------------------------------------------------
+19.0 Print Media Stylesheet
+--------------------------------------------------------------*/
+@media print {
+	/* Reset */
+	* {
+		background: transparent !important;
+		color: #000 !important;
+	}
+
+	/* Basic Layout */
+	@page {
+		margin: 1cm;
+	}
+
+	/* Hide redundant elements */
+	.main-navigation,
+	.post-navigation,
+	.widget-area,
+	.site-footer,
+	.comment-respond,
+	.sharedaddy,
+	.reply {
+		display: none;
+	}
+
+	.content-area {
+		float: none;
+	}
+
+	.hentry {
+		border-width: 0;
+	}
+
+	.content-area p {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	dt {
+		page-break-after: avoid;
+	}
+
+	blockquote,
+	.wp-caption {
+		page-break-inside: avoid;
+	}
+
+	/* Stop preformated text from running off the page */
+	pre {
+		white-space: pre-wrap;
+		word-wrap: break-word;
+	}
+}

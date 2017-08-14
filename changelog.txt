@@ -1,0 +1,42 @@
+Version 1.0.6
+-------------
+* Fix continue reading link
+
+Version 1.0.5
+-------------
+* Use h2 tags on widget titles
+* Avoid duplicating .page-title in index.php
+* Include WPCS: XSS OK. comment in daniela_posted_on()
+
+Version 1.0.4
+-------------
+* Update heading structure for accessibility
+* Fix padding on comments awaiting moderation
+* Define :focus styles for form fields
+
+Version 1.0.3
+-------------
+* Escape remaining data
+
+Version 1.0.2
+-------------
+* Add height setting to custom header image
+* Add space to comments are closed message
+* Add space to comments are closed message
+* Tweak icon positioning
+* Fix edit icon on trackbacks
+* Ensure Jetpack testimonial settings exist before attempting to access
+* Remove link to underscores.me from footer
+* Fix error in readme
+* Escape headings on front page
+* Escape all translated strings
+
+Version 1.0.1
+-------------
+
+* Remove redundant file
+
+Version 1
+---------
+
+* Initial public release
